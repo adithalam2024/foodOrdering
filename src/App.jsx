@@ -82,7 +82,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route
-          path="/"
+          path="/react-project"
           element={
             <LoginPage
               customerData={customerData}
