@@ -1,0 +1,71 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Header Section */
+.header {
+  background-color: #ffa726;
+  padding: 20px 0;
+}
+
+.header-title {
+  margin: 0;
+  color: white;
+  font-size: 24px;
+}
+
+/* Content Section */
+.content {
+  padding: 40px 20px;
+}
+
+.greeting {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.instruction {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.room-input {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.login-button {
+  background-color: #ffa726;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #fb8c00;
+}

@@ -1,0 +1,36 @@
+{
+  "dishes": [
+    {
+      "id": 1,
+      "category": "regular",
+      "dishName": "Daal",
+      "imageUrl": "https://www.vegrecipesofindia.com/wp-content/uploads/2021/02/dal-fry-recipe-1.jpg",
+      "comment": "",
+      "added": false
+    },
+    {
+      "id": 2,
+      "category": "regular",
+      "dishName": "Dosai",
+      "imageUrl": "https://inemai.com/wp-content/uploads/2019/02/Dosai.png",
+      "comment": "",
+      "added": false
+    },
+    {
+      "id": 3,
+      "category": "addOns",
+      "dishName": "Chicken curry",
+      "imageUrl": "https://www.shutterstock.com/image-photo/tasty-butter-chicken-curry-dish-600nw-2360173335.jpg",
+      "comment": "",
+      "added": false
+    },
+    {
+      "id": 4,
+      "category": "addOns",
+      "dishName": "Egg curry",
+      "imageUrl": "https://images.services.kitchenstories.io/EPAs3NYa-v4uK2NumQYwhJ4Cd58=/3840x0/filters:quality(85)/images.kitchenstories.io/wagtailOriginalImages/R2899-photo-final-3x4.jpg",
+      "comment": "",
+      "added": false
+    }
+  ]
+}
