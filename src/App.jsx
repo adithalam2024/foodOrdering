@@ -78,7 +78,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route
-          path="/react-project"
+          path="/"
           element={
             <LoginPage
               customerData={customerData}
@@ -92,7 +92,7 @@ function App() {
           }
         />
         <Route
-          path="/react-project/menu"
+          path="/menu"
           element={
             !confirmed ? (
               <Menu
@@ -115,7 +115,7 @@ function App() {
           }
         />
         <Route
-          path="/react-project/orderDetials"
+          path="/orderDetials"
           element={
             !confirmed ? (
               <OrderDetails
@@ -134,7 +134,7 @@ function App() {
             )
           }
         />
-        <Route path="/react-project/confirmation" element={<Confirmation />} />
+        <Route path="/confirmation" element={<Confirmation />} />
       </Routes>
     </BrowserRouter>
   );
