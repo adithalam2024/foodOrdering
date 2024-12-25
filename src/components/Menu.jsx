@@ -52,7 +52,7 @@ const Menu = ({ customerData, dishes, setDishes, countries }) => {
       <div class="section">
         <div class="container has-text-centered">
           <button class="button is-success is-large is-fullwidth">
-            <Link to="/react-project/orderDetials">Next</Link>
+            <Link to="/orderDetials">Next</Link>
           </button>
         </div>
       </div>
