@@ -1,51 +1,107 @@
 import { Link } from "react-router-dom";
-import "../index.css";
+// import "../index.css";
 
 import MenuItem from "./MenuItem";
 
 const Menu = ({ customerData, dishes, setDishes, countries }) => {
   return (
-    <div className="menu-container">
-      <h1 className="menu-title">Menu</h1>
+    <>
+      <section class="section">
+        <div class="container">
+          <h2 class="title has-text-centered p-2">Our Menu</h2>
 
-      <div className="section">
-        <h2 className="section-title">Today's Available Dishes</h2>
-        {dishes.map((el) => {
-          if (el.category == "regular") {
-            return (
-              <MenuItem
-                e={el}
-                key={el.id}
-                customerData={customerData}
-                setDishes={setDishes}
-                dishes={dishes}
-              />
-            );
-          }
-        })}
+          <div class="mt-6">
+            <h3 class="subtitle is-3">Today's dishes</h3>
+            <div className="columns is-multiline">
+              {dishes.map((el) => {
+                if (el.category == "regular") {
+                  return (
+                    <MenuItem
+                      e={el}
+                      key={el.id}
+                      customerData={customerData}
+                      setDishes={setDishes}
+                      dishes={dishes}
+                    />
+                  );
+                }
+              })}
+            </div>
+          </div>
+
+          <div className="mt-6">
+            <h3 class="subtitle is-3">Ala la carte</h3>
+            <div className="columns is-multiline">
+              {dishes.map((el) => {
+                if (el.category == "addOns") {
+                  return (
+                    <MenuItem
+                      e={el}
+                      key={el.id}
+                      customerData={customerData}
+                      setDishes={setDishes}
+                      dishes={dishes}
+                    />
+                  );
+                }
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="section">
+        <div class="container has-text-centered">
+          <button class="button is-success is-large is-fullwidth">
+            <Link to="/react-project/orderDetials">Next</Link>
+          </button>
+        </div>
       </div>
+    </>
 
-      <div className="section">
-        <h2 className="section-title">Add ons</h2>
-        {dishes.map((el) => {
-          if (el.category == "addOns") {
-            return (
-              <MenuItem
-                e={el}
-                key={el.id}
-                customerData={customerData}
-                setDishes={setDishes}
-                dishes={dishes}
-              />
-            );
-          }
-        })}
-      </div>
+    // <div className="container is-fluid">
+    //   <div className="section">
+    //     <h1 className="title">Menu</h1>
+    //     <h2 className="subtitle">Today's Available Dishes</h2>
+    //     {dishes.map((el) => {
+    //       if (el.category == "regular") {
+    //         return (
+    //           <MenuItem
+    //             e={el}
+    //             key={el.id}
+    //             customerData={customerData}
+    //             setDishes={setDishes}
+    //             dishes={dishes}
+    //           />
+    //         );
+    //       }
+    //     })}
+    //   </div>
 
-      <button className="next-button">
-        <Link to="/orderDetials">Next</Link>
-      </button>
-    </div>
+    //   <div className="section">
+    //     <h2 className="subtitle">Add ons</h2>
+    //     {dishes.map((el) => {
+    //       if (el.category == "addOns") {
+    //         return (
+    //           <MenuItem
+    //             e={el}
+    //             key={el.id}
+    //             customerData={customerData}
+    //             setDishes={setDishes}
+    //             dishes={dishes}
+    //           />
+    //         );
+    //       }
+    //     })}
+    //   </div>
+
+    //   <div class="field">
+    //     <div class="control">
+    //       <button className="button is-fullwidth is-warning">
+    //         <Link to="/orderDetials">Next</Link>
+    //       </button>
+    //     </div>
+    //   </div>
+    // </div>
   );
 };
 

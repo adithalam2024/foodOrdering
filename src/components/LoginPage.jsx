@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../LoginPage.css";
+// import "../LoginPage.css";
 
 const LoginPage = ({
   customerData,
@@ -46,27 +46,101 @@ const LoginPage = ({
     navigate("menu");
   };
   return (
-    <div className="login-container">
-      <div className="header">
-        <h1 className="header-title">YMA-2</h1>
+    <>
+      <div
+        className="container is-flex is-justify-content-center is-align-items-center"
+        style={{ height: "100vh" }}
+      >
+        <div className="card">
+          <div className="card-content">
+            <p className="title">YMA - 2</p>
+            <div className="field">
+              <label className="label">Enter your room number</label>
+              <div className="control">
+                <input
+                  type="number"
+                  placeholder="Eg: 112"
+                  className="input"
+                  value={roomNumber}
+                  onChange={onChangeHandler}
+                />
+              </div>
+            </div>
+            <div className="field">
+              <p className="control">
+                {validRooms.includes(parseInt(roomNumber)) && (
+                  <button
+                    className="button is-warning is-align-self-center"
+                    onClick={loginHandler}
+                  >
+                    Login
+                  </button>
+                )}
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="content">
-        <h2 className="greeting">Good Afternoon</h2>
+
+      {/* <div className="container is-fluid">
+        <div className="card">
+          <div className="card-content">
+            <p className="title">YMA - 2</p>
+            <div className="field">
+              <label className="label">Enter your room number</label>
+              <div className="control">
+                <input
+                  type="number"
+                  placeholder="Eg: 112"
+                  className="input"
+                  value={roomNumber}
+                  onChange={onChangeHandler}
+                />
+              </div>
+            </div>
+            <div className="field">
+              <p className="control">
+                {validRooms.includes(parseInt(roomNumber)) && (
+                  <button
+                    className="button is-warning is-align-self-center"
+                    onClick={loginHandler}
+                  >
+                    Login
+                  </button>
+                )}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div> */}
+
+      {/* <div className="panel is-success">
+      <div className="has-background-warning is-flex is-flex-direction-column">
+        <h1 className="title has-text-white is-align-self-center">YMA-2</h1>
+      </div>
+      <div className="has-background-white is-flex is-flex-direction-column">
+        <h2 className="subtitle is-align-self-center">Good Afternoon</h2>
+
         <p className="instruction">Enter your room number</p>
         <input
           type="number"
           placeholder="Room number"
-          className="room-input"
+          class="input"
           value={roomNumber}
           onChange={onChangeHandler}
         />
+
         {validRooms.includes(parseInt(roomNumber)) && (
-          <button className="login-button" onClick={loginHandler}>
+          <button
+            className="button is-warning is-align-self-center"
+            onClick={loginHandler}
+          >
             Login
           </button>
         )}
       </div>
-    </div>
+    </div> */}
+    </>
   );
 };
 

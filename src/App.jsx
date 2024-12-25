@@ -14,11 +14,7 @@ const supabase = createClient(
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRyeHBmd2doc2lvamxoY2ZqZm1oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzI5Nzg2NDUsImV4cCI6MjA0ODU1NDY0NX0.iEGes18NUzfTI-z7RGCrwnGsldWEQMcnz4uGBqkAc8I"
 );
 
-const customerData = {
-  roomNo: 0,
-  dishesOrdered: [],
-  orderConfirmed: false,
-};
+const customerData = { roomNo: 0, dishesOrdered: [], orderConfirmed: false };
 console.log("hello");
 
 async function getCustomerData() {
@@ -82,7 +78,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route
-          path="/"
+          path="/react-project"
           element={
             <LoginPage
               customerData={customerData}
@@ -96,7 +92,7 @@ function App() {
           }
         />
         <Route
-          path="/menu"
+          path="/react-project/menu"
           element={
             !confirmed ? (
               <Menu
@@ -119,7 +115,7 @@ function App() {
           }
         />
         <Route
-          path="/orderDetials"
+          path="/react-project/orderDetials"
           element={
             !confirmed ? (
               <OrderDetails
@@ -138,7 +134,7 @@ function App() {
             )
           }
         />
-        <Route path="/confirmation" element={<Confirmation />} />
+        <Route path="/react-project/confirmation" element={<Confirmation />} />
       </Routes>
     </BrowserRouter>
   );
